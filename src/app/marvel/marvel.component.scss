@@ -1,0 +1,52 @@
+        .header {
+            background: #EC1D24;
+        }
+        
+        .column {
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+        }
+        
+        .row {
+            padding: 10%;
+            text-align: center;
+        }
+        
+        img {
+            width: 90%;
+            height: 350px;
+        }
+        
+        .example-button-row button,
+        .example-button-row a {
+            margin-right: 8px;
+        }
+        
+        example-card {
+            max-width: 400px;
+        }
+        
+        .example-header-image {
+            background-size: cover;
+        }
+        
+        mat-card.example-card.mat-card {
+            -webkit-box-shadow: 10px 11px 45px -6px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 10px 11px 45px -6px rgba(255, 255, 255, 1);
+            box-shadow: 10px 11px 45px -6px rgba(255, 255, 255, 1);
+        }
+        
+        .example-container {
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .example-container>* {
+            width: 100%;
+        }
+        
+        .button-row button,
+        .button-row a {
+            margin-right: 8px;
+        }

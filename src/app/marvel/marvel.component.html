@@ -1,4 +1,3 @@
-!--The content below is only a placeholder and can be replaced.-->
 <div class="header" style="text-align:center">
     <span class="icon--svg icon--svg mvl-animated-logo" aria-hidden="true">
         <svg width="130" height="52" xmlns="http://www.w3.org/2000/svg">
@@ -10,9 +9,24 @@
     </span>
 </div>
 <div class="column">
-    <div class="row" *ngFor="let post of posts ">
-        <img src={{post.thumbnail.path}}.jpg>
-        <h3>{{post.series.name}}</h3>
-        <h3>{{post.dates[0].date|date:'mediumDate'}}</h3>
+    <div class="row" *ngFor="let post of posts; let i = index">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{post.series.name}}</mat-card-title>
+                <mat-card-subtitle>{{post.dates[0].date|date:'mediumDate'}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{post.thumbnail.path}}.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>{{post.series.name}}</p>
+                <p>{{post.dates[0].date|date:'mediumDate'}}</p>
+                <p>Numero de Likes</p>
+                <p>{{numberOfLikes[i]}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button (click)="likeButtonClick(i)">Like</button>
+                <button mat-button *ngIf="numberOfLikes[i] > 0 " class="btn btn-success" (click)="dislikeButtonClick(i)">DisLike</button>
+            </mat-card-actions>
+        </mat-card>
     </div>
 </div>
