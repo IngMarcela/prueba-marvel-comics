@@ -32,15 +32,6 @@ export class MarvelComponent implements OnInit {
     }
   }
 
-  public showSearchResults(event: any): void {
-    if (event.target.value.length >= 3) {
-      alert(event.target.value);
-      //this.searching = true;
-    } else {
-      //this.searching = false;
-    }
-  }
-
 
   ngOnInit() {
       this.dataService.getData().subscribe(data =>{
